@@ -50,8 +50,6 @@ pip install langchain langchain-chroma langchain-huggingface tqdm
 If you are planning to use Ollama, you need to:
 Install Ollama by following the instructions provided at Ollama's official website.
 Run an Ollama server locally on port 11434
-Pull the embedding model:
-ollama pull nomic-embed-text
 ```
 md-embed can be run from the command line. It provides a command-line interface using argparse with the following option:<br />
 --filters-off: Disables the "404" and "©" filters<br />
@@ -78,12 +76,12 @@ Persistence Directory: Specify the directory where the ChromaDB database will be
 Collection Name: Choose a name for the ChromaDB collection<br />
 Example (JSON Input):<br />
 ```bash
-python markdown_embedder.py
+python md-embed.py
 ```
 Follow the prompts, providing the necessary information (input file, output folder, embedding choices, etc.)<br />
 Example (Disabling Filters):
 ```bash
-python markdown_embedder.py --filters-off
+python md-embed.py --filters-off
 ```
 Cleaned Markdown Files (JSON Input): If using JSON input, the script will save cleaned markdown files to the specified output folder<br />
 ChromaDB Database: The script will create a ChromaDB database in the specified persistence directory, containing the embeddings and metadata<br />
